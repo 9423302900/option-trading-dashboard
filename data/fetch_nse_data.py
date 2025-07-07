@@ -14,6 +14,4 @@ def fetch_option_chain(symbol="BANKNIFTY"):
 
     if response.status_code == 200:
         return response.json()
-    else:
-        return None
-
+    return None
