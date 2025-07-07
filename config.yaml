@@ -1,0 +1,13 @@
+indices:
+  - NIFTY
+  - BANKNIFTY
+  - FINNIFTY
+
+stocks:
+  - RELIANCE
+  - TATAMOTORS
+  - SBIN
+  - HDFCBANK
+
+commodities:
+  - CRUDEOIL
