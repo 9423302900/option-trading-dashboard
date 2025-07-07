@@ -18,5 +18,15 @@ def get_signals():
         return [{"message": msg}]
     else:
         return []
+def fetch_crude_price():
+    url = "https://commodityapi.com/api/latest"
+    params = {
+        "access_key": "YOUR_API_KEY",
+        "symbols": "CRUDEOIL"
+    }
+    res = requests.get(url, params=params)
+    if res.status_code == 200:
+        return res.json().get("data", {}).get("CRUDEOIL", {}).get("price", "N/A")
+    return None
 
 
