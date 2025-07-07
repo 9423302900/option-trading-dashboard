@@ -84,4 +84,14 @@ def generate_signals():
 
     return alerts
 
+import ta
+import pandas as pd
+
+def add_adx(df):
+    df['ADX'] = ta.trend.adx(df['high'], df['low'], df['close'], window=14)
+    return df
+
+def add_vwap(df):
+    df['VWAP'] = (df['close'] * df['volume']).cumsum() / df['volume'].cumsum()
+    return df
 
