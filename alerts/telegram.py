@@ -11,3 +11,4 @@ def send_telegram_alert(message):
         "parse_mode": "HTML"
     }
     requests.post(url, data=payload)
+
